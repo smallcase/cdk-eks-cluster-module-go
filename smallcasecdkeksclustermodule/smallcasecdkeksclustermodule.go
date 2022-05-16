@@ -270,9 +270,9 @@ type EKSClusterProps struct {
 }
 
 type FargetProfile struct {
-	Labels *InternalMap `json:"labels" yaml:"labels"`
 	Namespaces *[]*string `json:"namespaces" yaml:"namespaces"`
 	ProfileName *string `json:"profileName" yaml:"profileName"`
+	Labels *InternalMap `json:"labels" yaml:"labels"`
 }
 
 type ICommonComponentsProps interface {
@@ -368,6 +368,7 @@ type StandardHelmProps struct {
 	ChartName *string `json:"chartName" yaml:"chartName"`
 	ChartReleaseName *string `json:"chartReleaseName" yaml:"chartReleaseName"`
 	ChartVersion *string `json:"chartVersion" yaml:"chartVersion"`
+	CreateNamespace *bool `json:"createNamespace" yaml:"createNamespace"`
 	HelmRepository *string `json:"helmRepository" yaml:"helmRepository"`
 	HelmValues *map[string]interface{} `json:"helmValues" yaml:"helmValues"`
 	LocalHelmChart *string `json:"localHelmChart" yaml:"localHelmChart"`
