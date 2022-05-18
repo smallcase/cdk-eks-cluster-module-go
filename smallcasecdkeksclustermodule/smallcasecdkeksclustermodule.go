@@ -35,6 +35,7 @@ type ClusterConfig struct {
 	ArgoCD *ArgoCD `json:"argoCD" yaml:"argoCD"`
 	CommonComponents *map[string]ICommonComponentsProps `json:"commonComponents" yaml:"commonComponents"`
 	FargetProfiles *[]*FargetProfile `json:"fargetProfiles" yaml:"fargetProfiles"`
+	Namespaces *map[string]*NamespaceSpec `json:"namespaces" yaml:"namespaces"`
 	PublicAllowAccess *[]*string `json:"publicAllowAccess" yaml:"publicAllowAccess"`
 	TeamExistingRolePermission *map[string]*string `json:"teamExistingRolePermission" yaml:"teamExistingRolePermission"`
 }
@@ -134,7 +135,7 @@ type EKSCluster interface {
 	FargetProfiles() *[]*FargetProfile
 	// The tree node.
 	Node() constructs.Node
-	AddServiceAccountWithIamRole(serviceAccountName *string, serviceAccountNamespace *string, policy interface{}, saNamespaceCreate *bool)
+	AddServiceAccountWithIamRole(serviceAccountName *string, serviceAccountNamespace *string, policy interface{})
 	// Returns a string representation of this construct.
 	ToString() *string
 }
@@ -238,11 +239,11 @@ func EKSCluster_IsConstruct(x interface{}) *bool {
 	return returns
 }
 
-func (e *jsiiProxy_EKSCluster) AddServiceAccountWithIamRole(serviceAccountName *string, serviceAccountNamespace *string, policy interface{}, saNamespaceCreate *bool) {
+func (e *jsiiProxy_EKSCluster) AddServiceAccountWithIamRole(serviceAccountName *string, serviceAccountNamespace *string, policy interface{}) {
 	_jsii_.InvokeVoid(
 		e,
 		"addServiceAccountWithIamRole",
-		[]interface{}{serviceAccountName, serviceAccountNamespace, policy, saNamespaceCreate},
+		[]interface{}{serviceAccountName, serviceAccountNamespace, policy},
 	)
 }
 
@@ -344,6 +345,11 @@ func (j *jsiiProxy_ICommonComponentsProps) SetServiceAccounts(val *[]*string) {
 }
 
 type InternalMap struct {
+}
+
+type NamespaceSpec struct {
+	Annotations *InternalMap `json:"annotations" yaml:"annotations"`
+	Labels *InternalMap `json:"labels" yaml:"labels"`
 }
 
 type NodeGroupConfig struct {

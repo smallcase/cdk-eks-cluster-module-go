@@ -79,6 +79,10 @@ func init() {
 		reflect.TypeOf((*InternalMap)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@smallcase/cdk-eks-cluster-module.NamespaceSpec",
+		reflect.TypeOf((*NamespaceSpec)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@smallcase/cdk-eks-cluster-module.NodeGroupConfig",
 		reflect.TypeOf((*NodeGroupConfig)(nil)).Elem(),
 	)
