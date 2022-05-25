@@ -34,7 +34,7 @@ type ClusterConfig struct {
 	AlbControllerVersion awseks.AlbControllerVersion `json:"albControllerVersion" yaml:"albControllerVersion"`
 	ArgoCD *ArgoCD `json:"argoCD" yaml:"argoCD"`
 	CommonComponents *map[string]ICommonComponentsProps `json:"commonComponents" yaml:"commonComponents"`
-	FargetProfiles *[]*FargetProfile `json:"fargetProfiles" yaml:"fargetProfiles"`
+	FargateProfiles *[]*FargateProfile `json:"fargateProfiles" yaml:"fargateProfiles"`
 	Namespaces *map[string]*NamespaceSpec `json:"namespaces" yaml:"namespaces"`
 	PublicAllowAccess *[]*string `json:"publicAllowAccess" yaml:"publicAllowAccess"`
 	TeamExistingRolePermission *map[string]*string `json:"teamExistingRolePermission" yaml:"teamExistingRolePermission"`
@@ -129,10 +129,10 @@ type CommonHelmChartsProps struct {
 
 type EKSCluster interface {
 	constructs.Construct
-	AdditionalFargetProfile() *[]awseks.FargateProfile
+	AdditionalFargateProfile() *[]awseks.FargateProfile
 	AdditionalNodegroups() *[]awseks.Nodegroup
 	Cluster() awseks.Cluster
-	FargetProfiles() *[]*FargetProfile
+	FargateProfiles() *[]*FargateProfile
 	// The tree node.
 	Node() constructs.Node
 	AddServiceAccountWithIamRole(serviceAccountName *string, serviceAccountNamespace *string, policy interface{})
@@ -145,11 +145,11 @@ type jsiiProxy_EKSCluster struct {
 	internal.Type__constructsConstruct
 }
 
-func (j *jsiiProxy_EKSCluster) AdditionalFargetProfile() *[]awseks.FargateProfile {
+func (j *jsiiProxy_EKSCluster) AdditionalFargateProfile() *[]awseks.FargateProfile {
 	var returns *[]awseks.FargateProfile
 	_jsii_.Get(
 		j,
-		"additionalFargetProfile",
+		"additionalFargateProfile",
 		&returns,
 	)
 	return returns
@@ -175,11 +175,11 @@ func (j *jsiiProxy_EKSCluster) Cluster() awseks.Cluster {
 	return returns
 }
 
-func (j *jsiiProxy_EKSCluster) FargetProfiles() *[]*FargetProfile {
-	var returns *[]*FargetProfile
+func (j *jsiiProxy_EKSCluster) FargateProfiles() *[]*FargateProfile {
+	var returns *[]*FargateProfile
 	_jsii_.Get(
 		j,
-		"fargetProfiles",
+		"fargateProfiles",
 		&returns,
 	)
 	return returns
@@ -270,7 +270,7 @@ type EKSClusterProps struct {
 	ClusterVPC awsec2.IVpc `json:"clusterVPC" yaml:"clusterVPC"`
 }
 
-type FargetProfile struct {
+type FargateProfile struct {
 	Namespaces *[]*string `json:"namespaces" yaml:"namespaces"`
 	ProfileName *string `json:"profileName" yaml:"profileName"`
 	Labels *InternalMap `json:"labels" yaml:"labels"`

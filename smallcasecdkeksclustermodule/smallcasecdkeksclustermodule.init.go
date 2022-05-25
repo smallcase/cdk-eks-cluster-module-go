@@ -40,11 +40,11 @@ func init() {
 		"@smallcase/cdk-eks-cluster-module.EKSCluster",
 		reflect.TypeOf((*EKSCluster)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "additionalFargetProfile", GoGetter: "AdditionalFargetProfile"},
+			_jsii_.MemberProperty{JsiiProperty: "additionalFargateProfile", GoGetter: "AdditionalFargateProfile"},
 			_jsii_.MemberProperty{JsiiProperty: "additionalNodegroups", GoGetter: "AdditionalNodegroups"},
 			_jsii_.MemberMethod{JsiiMethod: "addServiceAccountWithIamRole", GoMethod: "AddServiceAccountWithIamRole"},
 			_jsii_.MemberProperty{JsiiProperty: "cluster", GoGetter: "Cluster"},
-			_jsii_.MemberProperty{JsiiProperty: "fargetProfiles", GoGetter: "FargetProfiles"},
+			_jsii_.MemberProperty{JsiiProperty: "fargateProfiles", GoGetter: "FargateProfiles"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 		},
@@ -59,8 +59,8 @@ func init() {
 		reflect.TypeOf((*EKSClusterProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"@smallcase/cdk-eks-cluster-module.FargetProfile",
-		reflect.TypeOf((*FargetProfile)(nil)).Elem(),
+		"@smallcase/cdk-eks-cluster-module.FargateProfile",
+		reflect.TypeOf((*FargateProfile)(nil)).Elem(),
 	)
 	_jsii_.RegisterInterface(
 		"@smallcase/cdk-eks-cluster-module.ICommonComponentsProps",
