@@ -34,6 +34,7 @@ type ClusterConfig struct {
 	AlbControllerVersion awseks.AlbControllerVersion `json:"albControllerVersion" yaml:"albControllerVersion"`
 	ArgoCD *ArgoCD `json:"argoCD" yaml:"argoCD"`
 	CommonComponents *map[string]ICommonComponentsProps `json:"commonComponents" yaml:"commonComponents"`
+	DebugLogs *bool `json:"debugLogs" yaml:"debugLogs"`
 	FargateProfiles *[]*FargateProfile `json:"fargateProfiles" yaml:"fargateProfiles"`
 	Namespaces *map[string]*NamespaceSpec `json:"namespaces" yaml:"namespaces"`
 	PublicAllowAccess *[]*string `json:"publicAllowAccess" yaml:"publicAllowAccess"`
@@ -123,7 +124,9 @@ func (c *jsiiProxy_CommonHelmCharts) ToString() *string {
 type CommonHelmChartsProps struct {
 	Cluster awseks.ICluster `json:"cluster" yaml:"cluster"`
 	HelmProps *StandardHelmProps `json:"helmProps" yaml:"helmProps"`
+	DependentNamespaces *[]awseks.KubernetesManifest `json:"dependentNamespaces" yaml:"dependentNamespaces"`
 	IamPolicyPath *[]*string `json:"iamPolicyPath" yaml:"iamPolicyPath"`
+	LogCharts *bool `json:"logCharts" yaml:"logCharts"`
 	ServiceAccounts *[]*string `json:"serviceAccounts" yaml:"serviceAccounts"`
 }
 
