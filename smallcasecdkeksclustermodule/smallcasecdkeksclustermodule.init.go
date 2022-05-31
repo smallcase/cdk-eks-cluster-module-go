@@ -36,6 +36,14 @@ func init() {
 		"@smallcase/cdk-eks-cluster-module.CommonHelmChartsProps",
 		reflect.TypeOf((*CommonHelmChartsProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterStruct(
+		"@smallcase/cdk-eks-cluster-module.DefaultCommonComponents",
+		reflect.TypeOf((*DefaultCommonComponents)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@smallcase/cdk-eks-cluster-module.DefaultCommonComponentsProps",
+		reflect.TypeOf((*DefaultCommonComponentsProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterClass(
 		"@smallcase/cdk-eks-cluster-module.EKSCluster",
 		reflect.TypeOf((*EKSCluster)(nil)).Elem(),

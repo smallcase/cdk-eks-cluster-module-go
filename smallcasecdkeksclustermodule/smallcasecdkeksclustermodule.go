@@ -35,6 +35,7 @@ type ClusterConfig struct {
 	ArgoCD *ArgoCD `json:"argoCD" yaml:"argoCD"`
 	CommonComponents *map[string]ICommonComponentsProps `json:"commonComponents" yaml:"commonComponents"`
 	DebugLogs *bool `json:"debugLogs" yaml:"debugLogs"`
+	DefaultCommonComponents *DefaultCommonComponents `json:"defaultCommonComponents" yaml:"defaultCommonComponents"`
 	FargateProfiles *[]*FargateProfile `json:"fargateProfiles" yaml:"fargateProfiles"`
 	Namespaces *map[string]*NamespaceSpec `json:"namespaces" yaml:"namespaces"`
 	PublicAllowAccess *[]*string `json:"publicAllowAccess" yaml:"publicAllowAccess"`
@@ -128,6 +129,17 @@ type CommonHelmChartsProps struct {
 	IamPolicyPath *[]*string `json:"iamPolicyPath" yaml:"iamPolicyPath"`
 	LogCharts *bool `json:"logCharts" yaml:"logCharts"`
 	ServiceAccounts *[]*string `json:"serviceAccounts" yaml:"serviceAccounts"`
+}
+
+type DefaultCommonComponents struct {
+	AwsEbsCsiDriver *DefaultCommonComponentsProps `json:"awsEbsCsiDriver" yaml:"awsEbsCsiDriver"`
+	AwsEfsCsiDriver *DefaultCommonComponentsProps `json:"awsEfsCsiDriver" yaml:"awsEfsCsiDriver"`
+	ClusterAutoscaler *DefaultCommonComponentsProps `json:"clusterAutoscaler" yaml:"clusterAutoscaler"`
+	ExternalDns *DefaultCommonComponentsProps `json:"externalDns" yaml:"externalDns"`
+}
+
+type DefaultCommonComponentsProps struct {
+	Namespace *string `json:"namespace" yaml:"namespace"`
 }
 
 type EKSCluster interface {
