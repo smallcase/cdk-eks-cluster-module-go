@@ -8,6 +8,7 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsec2"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awseks"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awskms"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/smallcase/cdk-eks-cluster-module-go/smallcasecdkeksclustermodule/internal"
@@ -289,6 +290,8 @@ type FargateProfile struct {
 	Namespaces *[]*string `json:"namespaces" yaml:"namespaces"`
 	ProfileName *string `json:"profileName" yaml:"profileName"`
 	Labels *InternalMap `json:"labels" yaml:"labels"`
+	PodExecutionRole awsiam.Role `json:"podExecutionRole" yaml:"podExecutionRole"`
+	SubnetSelection *awsec2.SubnetSelection `json:"subnetSelection" yaml:"subnetSelection"`
 }
 
 type ICommonComponentsProps interface {
