@@ -14,7 +14,7 @@ import (
 	cdk8s      "github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2/jsii"
 )
 
-//go:embed smallcase-cdk-eks-cluster-module-0.0.18.tgz
+//go:embed smallcase-cdk-eks-cluster-module-0.0.19.tgz
 var tarball []byte
 
 // Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
@@ -26,5 +26,5 @@ func Initialize() {
 	constructs.Initialize()
 
 	// Load this library into the kernel
-	_jsii_.Load("@smallcase/cdk-eks-cluster-module", "0.0.18", tarball)
+	_jsii_.Load("@smallcase/cdk-eks-cluster-module", "0.0.19", tarball)
 }
