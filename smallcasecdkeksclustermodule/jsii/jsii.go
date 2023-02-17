@@ -11,10 +11,9 @@ import (
 
 	awscdk     "github.com/aws/aws-cdk-go/awscdk/v2/jsii"
 	constructs "github.com/aws/constructs-go/constructs/v10/jsii"
-	cdk8s      "github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2/jsii"
 )
 
-//go:embed smallcase-cdk-eks-cluster-module-0.0.19.tgz
+//go:embed smallcase-cdk-eks-cluster-module-0.0.20.tgz
 var tarball []byte
 
 // Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
@@ -22,9 +21,8 @@ var tarball []byte
 func Initialize() {
 	// Ensure all dependencies are initialized
 	awscdk.Initialize()
-	cdk8s.Initialize()
 	constructs.Initialize()
 
 	// Load this library into the kernel
-	_jsii_.Load("@smallcase/cdk-eks-cluster-module", "0.0.19", tarball)
+	_jsii_.Load("@smallcase/cdk-eks-cluster-module", "0.0.20", tarball)
 }

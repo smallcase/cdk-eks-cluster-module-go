@@ -1,16 +1,16 @@
 # cdk-eks-cluster-module
-cdk-eks-cluster-module  is a [CDK](<(github.com/aws-cdk/cdk)>) that helps you configure complete EKS clusters that are fully bootstrapped with the operational software that is needed to deploy and operate workloads. You can describe the configuration for the desired state of your EKS cluster, such as the control plane, worker nodes, and Kubernetes add-ons, as code.
 
+cdk-eks-cluster-module  is a [CDK]((github.com/aws-cdk/cdk)) that helps you configure complete EKS clusters that are fully bootstrapped with the operational software that is needed to deploy and operate workloads. You can describe the configuration for the desired state of your EKS cluster, such as the control plane, worker nodes, and Kubernetes add-ons, as code.
 
 ## :sparkles: Features
 
-- :white_check_mark: AWS EKS Cluster Addons
-- :white_check_mark: Support for Multiple NodeGroups with labels and taints
-- :white_check_mark: Support for Multiple fargate profiles with labels and namespace
-- :white_check_mark: AWS EKS Identity Provider Configuration
-- :white_check_mark: Support for custom AMI, custom launch template, and custom user data including custom user data template
-- :white_check_mark: commonComponents interface allow to install custom repo/local helm chart
-- :white_check_mark: Install aws-ebs-csi-driver,aws-efs-csi-driver,node-problem-detector helm charts to help manage storage, and nodes.
+* :white_check_mark: AWS EKS Cluster Addons
+* :white_check_mark: Support for Multiple NodeGroups with labels and taints
+* :white_check_mark: Support for Multiple fargate profiles with labels and namespace
+* :white_check_mark: AWS EKS Identity Provider Configuration
+* :white_check_mark: Support for custom AMI, custom launch template, and custom user data including custom user data template
+* :white_check_mark: commonComponents interface allow to install custom repo/local helm chart
+* :white_check_mark: Install aws-ebs-csi-driver,aws-efs-csi-driver,node-problem-detector helm charts to help manage storage, and nodes.
 
 ## :clapper: Quick Start
 
@@ -18,10 +18,9 @@ The quick start shows you how to create an **AWS-EKS** using this module.
 
 ### Prerequisites
 
-- A working [`aws`](https://aws.amazon.com/cli/) CLI installation with access to an account and administrator privileges
-- You'll need a recent [NodeJS](https://nodejs.org) installation
-- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) to interact with your fresh cluster
-
+* A working [`aws`](https://aws.amazon.com/cli/) CLI installation with access to an account and administrator privileges
+* You'll need a recent [NodeJS](https://nodejs.org) installation
+* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) to interact with your fresh cluster
 
 To get going you'll need a CDK project. For details please refer to the [detailed guide for CDK](https://docs.aws.amazon.com/cdk/latest/guide/hello_world.html).
 
@@ -39,15 +38,20 @@ npx cdk bootstrap
 ```
 
 Install using NPM:
+
 ```
 npm install @smallcase/cdk-eks-cluster-module
 ```
+
 Using yarn
+
 ```
 yarn add @smallcase/cdk-eks-cluster-module
 ```
+
 Using eks cluster can be deployed using the following sample code snippet:
-```typescript
+
+```go
 import {
   EKSCluster,
   VpcCniAddonVersion,
@@ -170,4 +174,3 @@ let ekscluster = new EKSCluster(this, 'EKS-CLUSTER', {
 ```
 
 ## [API.md](./API.md)
-
