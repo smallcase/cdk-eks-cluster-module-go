@@ -171,6 +171,39 @@ func VpcCniAddonVersion_V1_12_1() VpcCniAddonVersion {
 	return returns
 }
 
+func VpcCniAddonVersion_V1_12_2() VpcCniAddonVersion {
+	_init_.Initialize()
+	var returns VpcCniAddonVersion
+	_jsii_.StaticGet(
+		"@smallcase/cdk-eks-cluster-module.VpcCniAddonVersion",
+		"V1_12_2",
+		&returns,
+	)
+	return returns
+}
+
+func VpcCniAddonVersion_V1_12_5() VpcCniAddonVersion {
+	_init_.Initialize()
+	var returns VpcCniAddonVersion
+	_jsii_.StaticGet(
+		"@smallcase/cdk-eks-cluster-module.VpcCniAddonVersion",
+		"V1_12_5",
+		&returns,
+	)
+	return returns
+}
+
+func VpcCniAddonVersion_V1_12_5_2() VpcCniAddonVersion {
+	_init_.Initialize()
+	var returns VpcCniAddonVersion
+	_jsii_.StaticGet(
+		"@smallcase/cdk-eks-cluster-module.VpcCniAddonVersion",
+		"V1_12_5_2",
+		&returns,
+	)
+	return returns
+}
+
 func VpcCniAddonVersion_V1_6_3() VpcCniAddonVersion {
 	_init_.Initialize()
 	var returns VpcCniAddonVersion
