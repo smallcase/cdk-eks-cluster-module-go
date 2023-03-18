@@ -20,6 +20,7 @@ type ClusterConfig struct {
 	CommonComponents *map[string]ICommonComponentsProps `field:"optional" json:"commonComponents" yaml:"commonComponents"`
 	DebugLogs *bool `field:"optional" json:"debugLogs" yaml:"debugLogs"`
 	DefaultCommonComponents *DefaultCommonComponents `field:"optional" json:"defaultCommonComponents" yaml:"defaultCommonComponents"`
+	DeprecateClusterAutoScaler *bool `field:"optional" json:"deprecateClusterAutoScaler" yaml:"deprecateClusterAutoScaler"`
 	FargateProfiles *[]*FargateProfile `field:"optional" json:"fargateProfiles" yaml:"fargateProfiles"`
 	KubectlLayer awslambda.ILayerVersion `field:"optional" json:"kubectlLayer" yaml:"kubectlLayer"`
 	Namespaces *map[string]*NamespaceSpec `field:"optional" json:"namespaces" yaml:"namespaces"`
