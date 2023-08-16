@@ -25,6 +25,7 @@ type ClusterConfig struct {
 	KubectlLayer awslambda.ILayerVersion `field:"optional" json:"kubectlLayer" yaml:"kubectlLayer"`
 	Namespaces *map[string]*NamespaceSpec `field:"optional" json:"namespaces" yaml:"namespaces"`
 	PublicAllowAccess *[]*string `field:"optional" json:"publicAllowAccess" yaml:"publicAllowAccess"`
+	SkipExternalDNS *bool `field:"optional" json:"skipExternalDNS" yaml:"skipExternalDNS"`
 	TeamExistingRolePermission *map[string]*string `field:"optional" json:"teamExistingRolePermission" yaml:"teamExistingRolePermission"`
 }
 
