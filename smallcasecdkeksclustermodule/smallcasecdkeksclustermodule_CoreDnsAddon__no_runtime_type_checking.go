@@ -93,6 +93,10 @@ func (j *jsiiProxy_CoreDnsAddon) validateSetPreserveOnDeleteParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_CoreDnsAddon) validateSetTagsRawParameters(val *[]*awscdk.CfnTag) error {
+	return nil
+}
+
 func validateNewCoreDnsAddonParameters(scope constructs.Construct, id *string, props *CoreAddonProps) error {
 	return nil
 }

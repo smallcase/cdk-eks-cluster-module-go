@@ -93,6 +93,10 @@ func (j *jsiiProxy_VpcEniAddon) validateSetPreserveOnDeleteParameters(val interf
 	return nil
 }
 
+func (j *jsiiProxy_VpcEniAddon) validateSetTagsRawParameters(val *[]*awscdk.CfnTag) error {
+	return nil
+}
+
 func validateNewVpcEniAddonParameters(scope constructs.Construct, id *string, props *VpcCniAddonProps) error {
 	return nil
 }

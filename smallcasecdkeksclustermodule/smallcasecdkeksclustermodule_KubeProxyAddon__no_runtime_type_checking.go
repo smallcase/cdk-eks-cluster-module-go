@@ -93,6 +93,10 @@ func (j *jsiiProxy_KubeProxyAddon) validateSetPreserveOnDeleteParameters(val int
 	return nil
 }
 
+func (j *jsiiProxy_KubeProxyAddon) validateSetTagsRawParameters(val *[]*awscdk.CfnTag) error {
+	return nil
+}
+
 func validateNewKubeProxyAddonParameters(scope constructs.Construct, id *string, props *CoreAddonProps) error {
 	return nil
 }
