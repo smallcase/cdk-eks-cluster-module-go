@@ -302,6 +302,17 @@ func VpcCniAddonVersion_V1_20_4_1() VpcCniAddonVersion {
 	return returns
 }
 
+func VpcCniAddonVersion_V1_21_1_3() VpcCniAddonVersion {
+	_init_.Initialize()
+	var returns VpcCniAddonVersion
+	_jsii_.StaticGet(
+		"@smallcase/cdk-eks-cluster-module.VpcCniAddonVersion",
+		"V1_21_1_3",
+		&returns,
+	)
+	return returns
+}
+
 func VpcCniAddonVersion_V1_6_3() VpcCniAddonVersion {
 	_init_.Initialize()
 	var returns VpcCniAddonVersion
