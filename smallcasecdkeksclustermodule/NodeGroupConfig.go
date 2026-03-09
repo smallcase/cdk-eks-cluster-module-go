@@ -13,6 +13,7 @@ type NodeGroupConfig struct {
 	Name *string `field:"required" json:"name" yaml:"name"`
 	SubnetGroupName *string `field:"required" json:"subnetGroupName" yaml:"subnetGroupName"`
 	Taints *InternalMap `field:"required" json:"taints" yaml:"taints"`
+	AmiType awseks.NodegroupAmiType `field:"optional" json:"amiType" yaml:"amiType"`
 	CapacityType awseks.CapacityType `field:"optional" json:"capacityType" yaml:"capacityType"`
 	DesiredSize *float64 `field:"optional" json:"desiredSize" yaml:"desiredSize"`
 	DiskSize *float64 `field:"optional" json:"diskSize" yaml:"diskSize"`
