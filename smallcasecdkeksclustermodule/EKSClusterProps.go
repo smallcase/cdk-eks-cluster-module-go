@@ -14,6 +14,8 @@ type EKSClusterProps struct {
 	AddonProps *AddonProps `field:"optional" json:"addonProps" yaml:"addonProps"`
 	ClusterVPC awsec2.IVpc `field:"optional" json:"clusterVPC" yaml:"clusterVPC"`
 	CoreDnsAddonProps *CoreAddonValuesProps `field:"optional" json:"coreDnsAddonProps" yaml:"coreDnsAddonProps"`
+	EfsCsiAddonProps *CoreAddonValuesProps `field:"optional" json:"efsCsiAddonProps" yaml:"efsCsiAddonProps"`
 	KubeProxyAddonProps *CoreAddonValuesProps `field:"optional" json:"kubeProxyAddonProps" yaml:"kubeProxyAddonProps"`
+	S3CsiAddonProps *CoreAddonValuesProps `field:"optional" json:"s3CsiAddonProps" yaml:"s3CsiAddonProps"`
 }
 
